@@ -1,5 +1,9 @@
-import 'package:egypt_eye/homescreen.dart';
+
+
 import 'package:flutter/material.dart';
+
+import 'package:egypt_eye/view/signin.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      home: HomeScreen(),
+      home: Signin(),
     );
   }
 }
