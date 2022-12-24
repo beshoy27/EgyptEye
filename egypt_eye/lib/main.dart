@@ -1,8 +1,6 @@
-
-
 import 'package:flutter/material.dart';
-
 import 'package:egypt_eye/view/signin.dart';
+import 'package:egypt_eye/view/signup.dart';
 
 
 void main() {
@@ -16,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Signin(),
+      home: SignupPage(),
     );
   }
 }
