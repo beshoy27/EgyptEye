@@ -28,7 +28,7 @@ class _SignupPageState extends State<SignupPage> {
               fontSize: 20,
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Container(
@@ -48,7 +48,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Container(
@@ -68,7 +68,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Container(
@@ -88,7 +88,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Container(
@@ -100,6 +100,7 @@ class _SignupPageState extends State<SignupPage> {
               child: Padding(
                 padding: const EdgeInsets.only(left: 20.0),
                 child: TextField(
+                  obscureText: true,
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Password',
@@ -108,7 +109,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Container(
@@ -128,6 +129,22 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
+          SizedBox(height: 10),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal:25.0),
+            child: Container(
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(color:Colors.blue[300]),
+              
+              
+              child: Center(
+                child: Text(
+                  'Sign Up',
+                  style: TextStyle(color:Colors.white),
+                )
+                ),
+            ),
+          )
         ])));
   }
 }
