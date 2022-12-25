@@ -14,6 +14,15 @@ class _SignupPageState extends State<SignupPage> {
         backgroundColor: Colors.grey[300],
         body: SafeArea(
             child: Column(children: [
+
+              //logo edit//
+               Expanded(
+                child:
+                Image.asset('assets/eye.png')
+                ),
+                const SizedBox(height: 0),
+              /////////////////////////
+
           Text(
             'Welcome to the App',
             style: TextStyle(
