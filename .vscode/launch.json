@@ -9,7 +9,7 @@
             "cwd": "egypt_eye",
             "request": "launch",
             "type": "dart",
-            "program": "C:/Users/besho/Desktop/EgyptEye/egypt_eye/lib/main.dart"
+            "program": "E:/EgyptEye/egypt_eye/lib/main.dart"
         },
         {
             "name": "egypt_eye (profile mode)",
@@ -17,7 +17,7 @@
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile",
-            "program": "C:/Users/besho/Desktop/EgyptEye/egypt_eye/lib/main.dart"
+            "program": "E:/EgyptEye/egypt_eye/lib/main.dart"
         },
         {
             "name": "egypt_eye (release mode)",
@@ -25,7 +25,7 @@
             "request": "launch",
             "type": "dart",
             "flutterMode": "release",
-            "program": "C:/Users/besho/Desktop/EgyptEye/egypt_eye/lib/main.dart"
+            "program": "E:/EgyptEye/egypt_eye/lib/main.dart"
         }
     ]
 }

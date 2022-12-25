@@ -14,14 +14,10 @@ class _SignupPageState extends State<SignupPage> {
         backgroundColor: Colors.grey[300],
         body: SafeArea(
             child: Column(children: [
-
-              //logo edit//
-               Expanded(
-                child:
-                Image.asset('assets/eye.png')
-                ),
-                const SizedBox(height: 0),
-              /////////////////////////
+          //logo edit//
+          Expanded(child: Image.asset('assets/eye.png')),
+          const SizedBox(height: 0),
+          /////////////////////////
 
           Text(
             'Welcome to the App',
@@ -140,18 +136,15 @@ class _SignupPageState extends State<SignupPage> {
           ),
           SizedBox(height: 10),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal:25.0),
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Container(
               padding: EdgeInsets.all(20),
-              decoration: BoxDecoration(color:Colors.blue[300]),
-              
-              
+              decoration: BoxDecoration(color: Colors.blue[300]),
               child: Center(
-                child: Text(
-                  'Sign Up',
-                  style: TextStyle(color:Colors.white),
-                )
-                ),
+                  child: Text(
+                'Sign Up',
+                style: TextStyle(color: Colors.white),
+              )),
             ),
           )
         ])));
