@@ -1,6 +1,7 @@
 import 'package:egypt_eye/components/my_button.dart';
 import 'package:egypt_eye/components/my_textfield.dart';
 import 'package:egypt_eye/components/square_title.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
@@ -15,21 +16,20 @@ class Signin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+    backgroundColor: Colors.grey[300],
      body: SafeArea(
-        child: Center(
+        child: Center(  
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 50),
+             
 
               // logo
-              const Icon(
-                Icons.lock,
-                size: 100,
-              ),
+              Expanded(
 
-              const SizedBox(height: 50),
+              child: Image.asset('assets/eye.png')
+              ),
+              const SizedBox(height: 30),
 
               // welcome back, you've been missed!
               Text(
@@ -40,7 +40,7 @@ class Signin extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 50),
 
               // username textfield
               MyTextField(
@@ -49,7 +49,7 @@ class Signin extends StatelessWidget {
                 obscureText: false,
               ),
 
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
 
               // password textfield
               MyTextField(
@@ -58,7 +58,7 @@ class Signin extends StatelessWidget {
                 obscureText: true,
               ),
 
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
 
               // forgot password?
               Padding(
@@ -74,14 +74,14 @@ class Signin extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 20),
 
               // sign in button
               MyButton(
                 onTap: signUserIn,
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 20),
 
               // or continue with
               Padding(
@@ -111,23 +111,23 @@ class Signin extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 20),
 
               // google + apple sign in buttons
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
                   // google button
-                  SquareTile(imagePath: 'assets/google.png'),
+                  SquareTile(imagePath: 'assets/google.png',),
 
                   SizedBox(width: 25),
 
                   // apple button
-                  SquareTile(imagePath: 'assets/facebook.png')
+                  SquareTile(imagePath: 'assets/facebook.png',)
                 ],
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 20),
 
               // not a member? register now
               Row(
@@ -136,6 +136,7 @@ class Signin extends StatelessWidget {
                   Text(
                     'Not a member?',
                     style: TextStyle(color: Colors.grey[700]),
+                    
                   ),
                   const SizedBox(width: 4),
                   const Text(
@@ -143,6 +144,7 @@ class Signin extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.bold,
+                      
                     ),
                   ),
                 ],
