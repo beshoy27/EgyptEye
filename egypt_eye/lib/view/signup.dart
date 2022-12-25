@@ -140,7 +140,8 @@ class _SignupPageState extends State<SignupPage> {
               child: Center(
                 child: Text(
                   'Sign Up',
-                  style: TextStyle(color:Colors.white),
+                  style: TextStyle(color:Colors.white
+                  ),
                 )
                 ),
             ),
