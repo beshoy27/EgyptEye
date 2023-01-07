@@ -19,21 +19,21 @@ class _SignupPageState extends State<SignupPage> {
           const SizedBox(height: 0),
           /////////////////////////
 
-          Text(
+          const Text(
             'Welcome to the App',
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 24,
             ),
           ),
-          SizedBox(height: 10),
-          Text(
+          const SizedBox(height: 10),
+          const Text(
             'Register Now!',
             style: TextStyle(
               fontSize: 20,
             ),
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Container(
@@ -42,8 +42,8 @@ class _SignupPageState extends State<SignupPage> {
                 border: Border.all(color: Colors.white),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20.0),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 20.0),
                 child: TextField(
                   decoration: InputDecoration(
                     border: InputBorder.none,
@@ -53,7 +53,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Container(
@@ -62,8 +62,8 @@ class _SignupPageState extends State<SignupPage> {
                 border: Border.all(color: Colors.white),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20.0),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 20.0),
                 child: TextField(
                   decoration: InputDecoration(
                     border: InputBorder.none,
@@ -73,7 +73,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Container(
@@ -82,8 +82,8 @@ class _SignupPageState extends State<SignupPage> {
                 border: Border.all(color: Colors.white),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20.0),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 20.0),
                 child: TextField(
                   decoration: InputDecoration(
                     border: InputBorder.none,
@@ -93,7 +93,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Container(
@@ -102,8 +102,8 @@ class _SignupPageState extends State<SignupPage> {
                 border: Border.all(color: Colors.white),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20.0),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 20.0),
                 child: TextField(
                   obscureText: true,
                   decoration: InputDecoration(
@@ -114,7 +114,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Container(
@@ -123,8 +123,8 @@ class _SignupPageState extends State<SignupPage> {
                 border: Border.all(color: Colors.white),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20.0),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 20.0),
                 child: TextField(
                   decoration: InputDecoration(
                     border: InputBorder.none,
@@ -134,13 +134,13 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Container(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(color: Colors.blue[300]),
-              child: Center(
+              child: const Center(
                   child: Text(
                 'Sign Up',
                 style: TextStyle(color: Colors.white),

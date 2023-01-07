@@ -1,10 +1,6 @@
-import 'package:egypt_eye/ViewModels/SignInViewModel.dart';
 import 'package:egypt_eye/models/my_button.dart';
 import 'package:egypt_eye/models/my_textfield.dart';
 import 'package:egypt_eye/models/square_title.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -144,7 +140,7 @@ class Signin extends StatelessWidget {
                   ),
                   const SizedBox(width: 4),
                    TextButton(
-                    child: Text('Register now'),
+                    child: const Text('Register now'),
                     onPressed: () =>context.go('/path1')
 
 
