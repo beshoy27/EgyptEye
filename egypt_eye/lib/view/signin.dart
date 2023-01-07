@@ -6,6 +6,8 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
 class Signin extends StatelessWidget {
   Signin({super.key});
 
@@ -78,7 +80,9 @@ class Signin extends StatelessWidget {
 
               // sign in button
               MyButton(
-                onTap: signinViewModel.signUserIn(),
+                onTap:    ()=>context.go('/path2')
+ 
+                //signinViewModel.signUserIn(),
               ),
 
               const SizedBox(height: 20),
@@ -139,14 +143,13 @@ class Signin extends StatelessWidget {
                     
                   ),
                   const SizedBox(width: 4),
-                  const Text(
-                    'Register now',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
-                      
+                   TextButton(
+                    child: Text('Register now'),
+                    onPressed: () =>context.go('/path1')
+
+
                     ),
-                  ),
+                  
                 ],
               )
             ],
