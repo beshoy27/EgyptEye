@@ -1,4 +1,4 @@
-import 'package:egypt_eye/view/map.dart';
+import 'package:egypt_eye/view/HomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:egypt_eye/view/signin.dart';
 import 'package:egypt_eye/view/signup.dart';
