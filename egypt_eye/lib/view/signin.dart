@@ -1,6 +1,7 @@
-import 'package:egypt_eye/components/my_button.dart';
-import 'package:egypt_eye/components/my_textfield.dart';
-import 'package:egypt_eye/components/square_title.dart';
+import 'package:egypt_eye/ViewModels/SignInViewModel.dart';
+import 'package:egypt_eye/models/my_button.dart';
+import 'package:egypt_eye/models/my_textfield.dart';
+import 'package:egypt_eye/models/square_title.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -11,7 +12,6 @@ class Signin extends StatelessWidget {
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
-  void signUserIn() {}
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +78,7 @@ class Signin extends StatelessWidget {
 
               // sign in button
               MyButton(
-                onTap: signUserIn,
+                onTap: signinViewModel.signUserIn(),
               ),
 
               const SizedBox(height: 20),
