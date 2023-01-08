@@ -1,3 +1,4 @@
+import 'package:egypt_eye/view/HomeScreen.dart';
 import 'package:egypt_eye/view/map.dart';
 import 'package:flutter/material.dart';
 import 'package:egypt_eye/view/signin.dart';
@@ -35,7 +36,7 @@ static const String title ='GoRouter Routes';
             ),
             GoRoute(path: 'path2',
             builder:(BuildContext context, GoRouterState state)=>
-             const map(),
+             const HomeScreen(),
             ),
 
 
