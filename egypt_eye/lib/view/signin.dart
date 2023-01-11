@@ -1,14 +1,18 @@
-import 'package:egypt_eye/models/my_button.dart';
+import 'package:egypt_eye/models/signin_button.dart';
 import 'package:egypt_eye/models/my_textfield.dart';
 import 'package:egypt_eye/models/square_title.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
+import '../models/signin_w_g_button.dart';
 
 class Signin extends StatelessWidget {
   Signin({super.key});
-
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
+  final GoogleSignIn _googleSignIn=GoogleSignIn();
+
 
 
   @override
@@ -75,7 +79,7 @@ class Signin extends StatelessWidget {
               const SizedBox(height: 20),
 
               // sign in button
-              MyButton(
+              SignInButton(
                 onTap:    ()=>context.go('/path2')
  
                 //signinViewModel.signUserIn(),
@@ -116,14 +120,19 @@ class Signin extends StatelessWidget {
               // google + apple sign in buttons
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children:  [
                   // google button
-                  SquareTile(imagePath: 'assets/google.png',),
+                    SignInWithGoogle(
+   
+                 onTap: () { _googleSignIn.signIn(); },
+ 
+                //signinViewModel.signUserIn(),
+              ),
 
                   SizedBox(width: 25),
 
                   // apple button
-                  SquareTile(imagePath: 'assets/facebook.png',)
+                  SquareTile(imagePath: 'assets/facebook.png', onPressed: null,)
                 ],
               ),
 
