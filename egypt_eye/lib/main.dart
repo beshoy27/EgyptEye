@@ -35,7 +35,7 @@ static const String title ='GoRouter Routes';
             ),
             GoRoute(path: 'path2',
             builder:(BuildContext context, GoRouterState state)=>
-             const map(),
+             const HomeScreen(),
             ),
 
 
