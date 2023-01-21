@@ -88,12 +88,12 @@ class HomePage extends StatelessWidget {
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Ionicons.bookmark_outline),
-            label: "Bookmark",
+            icon: Icon(Ionicons.heart_outline),
+            label: "Favorites",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Ionicons.ticket_outline),
-            label: "Ticket",
+            icon: Icon(Ionicons.map_outline),
+            label: "Places",
           ),
           BottomNavigationBarItem(
             icon: Icon(Ionicons.person_outline),

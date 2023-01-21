@@ -28,7 +28,7 @@ class LocationCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 5),
                 Text(
-                  "United States, New York",
+                  "Cairo, Egypt",
                   style: Theme.of(context).textTheme.labelLarge,
                 )
               ],
