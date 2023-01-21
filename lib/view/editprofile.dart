@@ -20,7 +20,7 @@ class _EditProfilePageState extends State<EditProfile> {
               Icons.arrow_back,
               color: Colors.green,
             ),
-             onPressed: () {
+            onPressed: () {
               context.go('/path5');
             },
           ),
@@ -30,9 +30,9 @@ class _EditProfilePageState extends State<EditProfile> {
                 Icons.settings,
                 color: Colors.green,
               ),
-               onPressed: () {
-              context.go('/path4');
-            },
+              onPressed: () {
+                context.go('/path4');
+              },
             )
           ],
         ),
@@ -131,8 +131,8 @@ class _EditProfilePageState extends State<EditProfile> {
                               showPassword = !showPassword;
                             });
                           },
-                          icon:
-                              const Icon(Icons.remove_red_eye, color: Colors.black)),
+                          icon: const Icon(Icons.remove_red_eye,
+                              color: Colors.black)),
                       contentPadding: EdgeInsets.only(bottom: 3),
                       labelText: 'Password',
                       border: InputBorder.none,
@@ -160,7 +160,6 @@ class _EditProfilePageState extends State<EditProfile> {
                         color: Colors.black,
                       )),
                 ),
-                
                 const SizedBox(
                   height: 35,
                 ),
