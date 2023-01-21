@@ -17,12 +17,11 @@ class _SettingsPageState extends State<SettingsPage> {
         elevation: 1,
         leading: IconButton(
           onPressed: () {
-             context.go('/path2');
+            context.go('/path2');
           },
           icon: Icon(
             Icons.arrow_back,
             color: Colors.green,
-            
           ),
         ),
       ),
