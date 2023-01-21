@@ -1,36 +1,26 @@
-import 'package:egypt_eye/models/signin_button.dart';
+import 'package:egypt_eye/models/my_button.dart';
 import 'package:egypt_eye/models/my_textfield.dart';
 import 'package:egypt_eye/models/square_title.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-
-import '../models/signin_w_g_button.dart';
 
 class Signin extends StatelessWidget {
   Signin({super.key});
+
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
-  final GoogleSignIn _googleSignIn=GoogleSignIn();
-
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    backgroundColor: Colors.grey[300],
-     body: SafeArea(
-        child: Center(  
+      backgroundColor: Colors.grey[300],
+      body: SafeArea(
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-             
-
               // logo
-              Expanded(
-
-              child: Image.asset('assets/eye.png')
-              ),
+              Expanded(child: Image.asset('assets/eye.png')),
               const SizedBox(height: 30),
 
               // welcome back, you've been missed!
@@ -79,11 +69,10 @@ class Signin extends StatelessWidget {
               const SizedBox(height: 20),
 
               // sign in button
-              SignInButton(
-                onTap:    ()=>context.go('/path2')
- 
-                //signinViewModel.signUserIn(),
-              ),
+              MyButton(onTap: () => context.go('/path2')
+
+                  //signinViewModel.signUserIn(),
+                  ),
 
               const SizedBox(height: 20),
 
@@ -120,19 +109,18 @@ class Signin extends StatelessWidget {
               // google + apple sign in buttons
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children:  [
+                children: const [
                   // google button
-                    SignInWithGoogle(
-   
-                 onTap: () { _googleSignIn.signIn(); },
- 
-                //signinViewModel.signUserIn(),
-              ),
+                  SquareTile(
+                    imagePath: 'assets/google.png',
+                  ),
 
                   SizedBox(width: 25),
 
                   // apple button
-                  SquareTile(imagePath: 'assets/facebook.png', onPressed: null,)
+                  SquareTile(
+                    imagePath: 'assets/facebook.png',
+                  )
                 ],
               ),
 
@@ -145,16 +133,11 @@ class Signin extends StatelessWidget {
                   Text(
                     'Not a member?',
                     style: TextStyle(color: Colors.grey[700]),
-                    
                   ),
                   const SizedBox(width: 4),
-                   TextButton(
-                    child: const Text('Register now'),
-                    onPressed: () =>context.go('/path1')
-
-
-                    ),
-                  
+                  TextButton(
+                      child: const Text('Register now'),
+                      onPressed: () => context.go('/path1')),
                 ],
               )
             ],
@@ -164,4 +147,3 @@ class Signin extends StatelessWidget {
     );
   }
 }
-

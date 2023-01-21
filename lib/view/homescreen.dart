@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/users.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,10 +17,12 @@ class HomeScreen extends StatelessWidget {
             child: Text('Menu'),
             decoration: BoxDecoration(color: Colors.teal[300]),
           ),
-          ListTile(title: const Text('Profile')),
           ListTile(
-            title: Text('Settings'),
-          ),
+              title: const Text('Edit Profile'), onTap: () => context.go('/path3')),
+          ListTile(
+              title: const Text('Settings'), onTap: () => context.go('/path4')),
+              ListTile(
+              title: const Text('Profile'), onTap: () => context.go('/path5')),
         ],
       )),
       appBar: AppBar(
@@ -93,7 +96,7 @@ class HomeScreen extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () => (context),
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.teal[100],
+                    backgroundColor: Colors.teal[100],
                   ),
                   child: const Text(
                     '🤨',
@@ -108,7 +111,7 @@ class HomeScreen extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () => (context),
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.teal[100],
+                    backgroundColor: Colors.teal[100],
                   ),
                   child: const Text(
                     '😄',
@@ -122,7 +125,7 @@ class HomeScreen extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () => (context),
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.teal[100],
+                    backgroundColor: Colors.teal[100],
                   ),
                   child: const Text(
                     '🎨',
@@ -136,7 +139,7 @@ class HomeScreen extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () => (context),
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.teal[100],
+                    backgroundColor: Colors.teal[100],
                   ),
                   child: const Text(
                     '🥳',
@@ -150,7 +153,7 @@ class HomeScreen extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () => (context),
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.teal[100],
+                    backgroundColor: Colors.teal[100],
                   ),
                   child: const Text(
                     '🤸',

@@ -1,5 +1,8 @@
 import 'package:egypt_eye/view/HomeScreen.dart';
+import 'package:egypt_eye/view/editprofile.dart';
 import 'package:egypt_eye/view/map.dart';
+import 'package:egypt_eye/view/profile.dart';
+import 'package:egypt_eye/view/settings.dart';
 import 'package:egypt_eye/view/welcome_page_dart.dart';
 import 'package:flutter/material.dart';
 import 'package:egypt_eye/view/signin.dart';
@@ -47,6 +50,21 @@ class MyApp extends StatelessWidget {
           builder: (BuildContext context, GoRouterState state) =>
               const HomePage(),
         ),
+        GoRoute(
+          path: 'path33',
+          builder: (BuildContext context, GoRouterState state) =>
+              const EditProfile(),
+        ),
+        GoRoute(
+          path: 'path4',
+          builder: (BuildContext context, GoRouterState state) =>
+              const SettingsPage(),
+        ),
+        GoRoute(
+          path: 'path5',
+          builder: (BuildContext context, GoRouterState state) =>
+              const ProfilePage(),
+        )
       ],
       path: '/',
       builder: (BuildContext context, GoRouterState state) => WelcomePage(),

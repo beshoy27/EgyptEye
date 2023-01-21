@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:egypt_eye/models/nearby_places_model.dart';
 import 'package:egypt_eye/widgets/distance.dart';
+import 'package:flutter/material.dart';
 
 class NearbyPlaces extends StatelessWidget {
   const NearbyPlaces({Key? key}) : super(key: key);
@@ -72,7 +72,7 @@ class NearbyPlaces extends StatelessWidget {
                                         fontSize: 20,
                                         color: Theme.of(context).primaryColor,
                                       ),
-                                      text: "\$25",
+                                      text: "\$22",
                                       children: const [
                                         TextSpan(
                                             style: TextStyle(
