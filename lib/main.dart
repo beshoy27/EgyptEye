@@ -4,7 +4,6 @@ import 'package:egypt_eye/firebase_options.dart';
 import 'package:egypt_eye/view/editprofile.dart';
 import 'package:egypt_eye/view/forgetpasswordMail.dart';
 import 'package:egypt_eye/view/forgetpasswordPhon.dart';
-import 'package:egypt_eye/view/map.dart';
 import 'package:egypt_eye/view/otp_screen.dart';
 import 'package:egypt_eye/view/profile.dart';
 import 'package:egypt_eye/view/settings.dart';

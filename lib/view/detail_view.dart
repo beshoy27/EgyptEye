@@ -115,7 +115,7 @@ class _DetailViewState extends State<DetailView> {
                             ),
                             Text(
                               _travelList[widget.id].rating.toString(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 16.0,
                               ),
                             )
@@ -220,7 +220,7 @@ class _DetailViewState extends State<DetailView> {
                       children: [
                         Container(
                           padding: const EdgeInsets.all(10),
-                          child: Icon(
+                          child: const Icon(
                             Icons.favorite_border,
                             color: Color(0xff8f294f),
                           ),
