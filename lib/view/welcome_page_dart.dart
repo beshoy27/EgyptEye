@@ -1,7 +1,6 @@
 import 'package:egypt_eye/models/getstarted_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:egypt_eye/view/home_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});

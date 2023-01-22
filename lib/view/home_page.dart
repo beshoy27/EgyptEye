@@ -1,13 +1,5 @@
-import 'package:egypt_eye/models/custom_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:egypt_eye/view/welcome_page_dart.dart';
-import 'package:egypt_eye/models/custom_icon_button.dart';
-import 'package:ionicons/ionicons.dart';
-import 'package:egypt_eye/main.dart';
-import 'package:egypt_eye/models/travel.dart';
-import 'package:egypt_eye/view/detail_view.dart';
-import 'package:flutter/material.dart';
 import 'package:egypt_eye/models/travel.dart';
 import 'package:egypt_eye/view/detail_view.dart';
 
@@ -30,7 +22,7 @@ class _HomePageState extends State<HomePage> {
           child: ListView(
         padding: const EdgeInsets.all(0),
         children: [
-          DrawerHeader(
+          const DrawerHeader(
             child: Text('Menu'),
             decoration: BoxDecoration(color: Color.fromARGB(255, 27, 174, 243)),
           ),
@@ -53,24 +45,21 @@ class _HomePageState extends State<HomePage> {
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Hello"),
-            Text(
-              "Beshoy",
-              style: Theme.of(context).textTheme.labelMedium,
+            RichText(
+              text: TextSpan(
+                  text: 'Welcome ,',
+                  style: const TextStyle(
+                      color: Color(0xff8f294f), fontSize: 16, height: 1.5),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: 'Beshoy',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black.withOpacity(.8)))
+                  ]),
             ),
           ],
         ),
-        actions: const [
-          CustomIconButton(
-            icon: Icon(Ionicons.search_outline),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 8, right: 12),
-            child: CustomIconButton(
-              icon: Icon(Ionicons.notifications_outline),
-            ),
-          ),
-        ],
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -139,7 +128,7 @@ class _HomePageState extends State<HomePage> {
                                 bottom: 20,
                                 left: 20,
                                 child: Container(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 20, vertical: 10),
                                   decoration: const BoxDecoration(
                                       color: Color.fromRGBO(0, 0, 0, .5),
@@ -183,7 +172,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
-                        color: Color(0xff8f294f)),
+                        color: Colors.black),
                   ),
                 ],
               ),
