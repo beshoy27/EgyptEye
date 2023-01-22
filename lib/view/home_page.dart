@@ -1,28 +1,27 @@
+import 'package:egypt_eye/models/custom_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:egypt_eye/view/welcome_page_dart.dart';
+import 'package:egypt_eye/models/custom_icon_button.dart';
+import 'package:ionicons/ionicons.dart';
+import 'package:egypt_eye/main.dart';
+import 'package:egypt_eye/models/travel.dart';
+import 'package:egypt_eye/view/detail_view.dart';
+import 'package:flutter/material.dart';
 import 'package:egypt_eye/models/travel.dart';
 import 'package:egypt_eye/view/detail_view.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    List<Travel> _travelList = Travel.getTravelItems();
-    List<Travel> _nearestTravelList = Travel.getNearestItems();
-
     return Scaffold(
       drawer: Drawer(
           child: ListView(
         padding: const EdgeInsets.all(0),
         children: [
-          const DrawerHeader(
+          DrawerHeader(
             child: Text('Menu'),
             decoration: BoxDecoration(color: Color.fromARGB(255, 27, 174, 243)),
           ),
@@ -45,61 +44,32 @@ class _HomePageState extends State<HomePage> {
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            RichText(
-              text: TextSpan(
-                  text: 'Welcome ,',
-                  style: const TextStyle(
-                      color: Color(0xff8f294f), fontSize: 16, height: 1.5),
-                  children: <TextSpan>[
-                    TextSpan(
-                        text: 'Beshoy',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black.withOpacity(.8)))
-                  ]),
+            const Text("Hello"),
+            Text(
+              "Beshoy",
+              style: Theme.of(context).textTheme.labelMedium,
             ),
           ],
         ),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+      body: ListView(
+        physics: const BouncingScrollPhysics(),
+        padding: const EdgeInsets.all(14),
+        children: [
+          // LOCATION CARD
+          const LocationCard(),
+          const SizedBox(
+            height: 15,
+          ),
+          const TouristPlaces(),
+          // CATEGORIES
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              RichText(
-                text: TextSpan(
-                    text: 'Discover',
-                    style: const TextStyle(
-                        color: Color(0xff8f294f), fontSize: 32, height: 1.3),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: ' the Best Places to Travel',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black.withOpacity(.8)))
-                    ]),
-              ),
-              Container(
-                margin: const EdgeInsets.symmetric(vertical: 20),
-                decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(.1),
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(12),
-                  ),
-                ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'Nearest to you',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ],
+              Text(
+                "Recommendation",
+                style: Theme.of(context).textTheme.headline6,
               ),
               Container(
                 margin: const EdgeInsets.only(top: 16),
@@ -128,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                                 bottom: 20,
                                 left: 20,
                                 child: Container(
-                                  padding: const EdgeInsets.symmetric(
+                                  padding: EdgeInsets.symmetric(
                                       horizontal: 20, vertical: 10),
                                   decoration: const BoxDecoration(
                                       color: Color.fromRGBO(0, 0, 0, .5),
@@ -172,97 +142,39 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black),
+                        color: Color(0xff8f294f)),
                   ),
                 ],
               ),
-              Container(
-                margin: EdgeInsets.only(top: 16),
-                height: size.height * .4,
-                child: ListView.builder(
-                    itemCount: _travelList.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Padding(
-                        padding: EdgeInsets.only(bottom: 15.0),
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => DetailView(id: index)));
-                          },
-                          child: Row(
-                            children: [
-                              ClipRRect(
-                                borderRadius: const BorderRadius.all(
-                                  Radius.circular(10),
-                                ),
-                                child: Image.asset(
-                                  _travelList[index].imageUrl[1],
-                                  fit: BoxFit.fill,
-                                  height: 60.0,
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      _travelList[index].name,
-                                      style: const TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 8.0,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          _travelList[index].location,
-                                          style: const TextStyle(
-                                            fontSize: 16.0,
-                                            color: Color(0xff686771),
-                                          ),
-                                        ),
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: [
-                                            Image.asset(
-                                              "assets/images/star.png",
-                                              width: 30,
-                                            ),
-                                            Text(
-                                              _travelList[index]
-                                                  .rating
-                                                  .toString(),
-                                              style: const TextStyle(
-                                                fontSize: 16.0,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      );
-                    }),
-              ),
+              TextButton(onPressed: () {}, child: const Text("View All"))
             ],
           ),
-        ),
+          const SizedBox(height: 10),
+          const NearbyPlaces(),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Ionicons.home_outline),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Ionicons.bookmark_outline),
+            label: "Bookmark",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Ionicons.ticket_outline),
+            label: "Ticket",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Ionicons.person_outline),
+            label: "Profile",
+          )
+        ],
       ),
     );
   }

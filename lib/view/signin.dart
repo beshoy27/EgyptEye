@@ -50,7 +50,9 @@ class Signin extends StatelessWidget {
                 hintText: 'Password',
                 obscureText: true,
                 prefixIcon: const Icon(Icons.fingerprint),
+
               ),
+
 
               // forgot password?
               Padding(
@@ -62,18 +64,18 @@ class Signin extends StatelessWidget {
                       onPressed: () {
                         FPbottomsheet(context);
                       },
-                      child: Text('Forgot Password?'),
+                      child: const Text('Forgot Password?'),
                     ),
                   ],
                 ),
               ),
 
-              // sign in button
-              MyButton(
-                onTap: () => context.go('/path3'), title: 'SignIn',
 
-                //signinViewModel.signUserIn(),
-              ),
+              // sign in button
+              MyButton(onTap: () => context.go('/path3'), title: 'SignIn',
+
+                  //signinViewModel.signUserIn(),
+                  ),
 
               const SizedBox(height: 20),
 
@@ -110,15 +112,17 @@ class Signin extends StatelessWidget {
               // google login
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children:  [
                   // google button
                   OutlinedButton.icon(
-                      icon: const Image(
-                        image: AssetImage('assets/google.png'),
-                        width: 30.0,
-                      ),
-                      onPressed: () {},
-                      label: Text('Sign-In with Google'))
+                    icon: const Image(image: AssetImage('assets/google.png'),width: 30.0,),
+                    onPressed: () {},
+                  label:const Text('Sign-In with Google')
+                  
+                  )
+
+
+
                 ],
               ),
 
@@ -144,4 +148,5 @@ class Signin extends StatelessWidget {
       ),
     );
   }
+
 }
