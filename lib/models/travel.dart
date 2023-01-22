@@ -41,7 +41,7 @@ class Travel {
           'Cairo, Egypt',
           4.5,
           8,
-          ['assets/images/img3.webp', 'assets/images/thumbnail3.jpg'],
+          ['assets/images/img3.png', 'assets/images/thumbnail3.jpg'],
           283),
       Travel(
           'Cairo Tower',
