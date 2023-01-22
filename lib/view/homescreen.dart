@@ -1,5 +1,6 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
-import '../models/users.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,8 +15,8 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.all(0),
         children: [
           DrawerHeader(
-            child: Text('Menu'),
             decoration: BoxDecoration(color: Colors.teal[300]),
+            child: const Text('Menu'),
           ),
           ListTile(
               title: const Text('Edit Profile'), onTap: () => context.go('/path3')),
@@ -29,13 +30,13 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Welcome to Egypt Eye'),
       ),
       body: Container(
-        margin: EdgeInsets.only(bottom: 20),
+        margin: const EdgeInsets.only(bottom: 20),
         height: double.infinity,
         width: double.infinity,
         child: ListView(padding: const EdgeInsets.all(20), children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: const [
               Text(
                 'Explore!',
                 style: TextStyle(
@@ -56,7 +57,7 @@ class HomeScreen extends StatelessWidget {
               color: Colors.grey[200],
               borderRadius: BorderRadius.circular(12),
             ),
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             child: Row(
               children: [
                 Icon(
@@ -73,7 +74,7 @@ class HomeScreen extends StatelessWidget {
           ),
 
 //how do you feel bar
-          Text(
+          const Text(
             'How do you feel ?',
             style: TextStyle(
               color: Colors.black,
@@ -168,7 +169,7 @@ class HomeScreen extends StatelessWidget {
             height: 30,
           ),
 
-          Text(
+          const Text(
             'Suggestions:',
             style: TextStyle(
               color: Colors.black,
@@ -183,7 +184,7 @@ class HomeScreen extends StatelessWidget {
 
 //suggessions
           Container(
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               color: Colors.teal[300],
               borderRadius: BorderRadius.circular(16),
@@ -193,12 +194,12 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Icon(Icons.favorite),
+                    const Icon(Icons.favorite),
                     const SizedBox(
                       width: 10,
                     ),
                     Column(
-                      children: [
+                      children: const [
                         //title
                         Text(
                           'El-Barron Palace',
@@ -215,7 +216,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Icon(Icons.more_horiz)
+                const Icon(Icons.more_horiz)
               ],
             ),
           ),
@@ -223,7 +224,7 @@ class HomeScreen extends StatelessWidget {
             height: 10,
           ),
           Container(
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               color: Colors.teal[300],
               borderRadius: BorderRadius.circular(16),
@@ -233,12 +234,12 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Icon(Icons.favorite),
+                    const Icon(Icons.favorite),
                     const SizedBox(
                       width: 10,
                     ),
                     Column(
-                      children: [
+                      children: const [
                         //title
                         Text(
                           'YOGA studio',
@@ -255,7 +256,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Icon(Icons.more_horiz)
+                const Icon(Icons.more_horiz)
               ],
             ),
           ),
@@ -265,7 +266,7 @@ class HomeScreen extends StatelessWidget {
           ),
 
           Container(
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               color: Colors.teal[300],
               borderRadius: BorderRadius.circular(16),
@@ -275,12 +276,12 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Icon(Icons.favorite),
+                    const Icon(Icons.favorite),
                     const SizedBox(
                       width: 10,
                     ),
                     Column(
-                      children: [
+                      children: const [
                         //title
                         Text(
                           'Dream Park',
@@ -297,7 +298,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Icon(Icons.more_horiz)
+                const Icon(Icons.more_horiz)
               ],
             ),
           ),
@@ -307,7 +308,7 @@ class HomeScreen extends StatelessWidget {
           ),
 
           Container(
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               color: Colors.teal[300],
               borderRadius: BorderRadius.circular(16),
@@ -317,12 +318,12 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Icon(Icons.favorite),
+                    const Icon(Icons.favorite),
                     const SizedBox(
                       width: 10,
                     ),
                     Column(
-                      children: [
+                      children: const [
                         //title
                         Text(
                           'snow city',
@@ -339,7 +340,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Icon(Icons.more_horiz)
+                const Icon(Icons.more_horiz)
               ],
             ),
           ),
@@ -349,7 +350,7 @@ class HomeScreen extends StatelessWidget {
           ),
 
           Container(
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               color: Colors.teal[300],
               borderRadius: BorderRadius.circular(16),
@@ -359,12 +360,12 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Icon(Icons.favorite),
+                    const Icon(Icons.favorite),
                     const SizedBox(
                       width: 10,
                     ),
                     Column(
-                      children: [
+                      children: const [
                         //title
                         Text(
                           'aqua Park',
@@ -381,7 +382,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Icon(Icons.more_horiz)
+                const Icon(Icons.more_horiz)
               ],
             ),
           ),

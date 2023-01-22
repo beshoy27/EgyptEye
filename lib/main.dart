@@ -1,5 +1,6 @@
+// ignore_for_file: unused_import
+
 import 'package:egypt_eye/firebase_options.dart';
-import 'package:egypt_eye/view/HomeScreen.dart';
 import 'package:egypt_eye/view/editprofile.dart';
 import 'package:egypt_eye/view/forgetpasswordMail.dart';
 import 'package:egypt_eye/view/forgetpasswordPhon.dart';
@@ -95,7 +96,7 @@ class MyApp extends StatelessWidget {
         
       ],
       path: '/',
-      builder: (BuildContext context, GoRouterState state) => WelcomePage(),
+      builder: (BuildContext context, GoRouterState state) => const WelcomePage(),
     ),
   ]);
 }

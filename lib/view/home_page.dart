@@ -2,8 +2,6 @@ import 'package:egypt_eye/widgets/custom_icon_button.dart';
 import 'package:egypt_eye/widgets/nearby_places.dart';
 import 'package:egypt_eye/widgets/recommended_places.dart';
 import 'package:flutter/material.dart';
-import 'package:egypt_eye/view/welcome_page_dart.dart';
-import 'package:egypt_eye/widgets/custom_icon_button.dart';
 import 'package:egypt_eye/widgets/location_card.dart';
 import 'package:egypt_eye/widgets/tourist_places.dart';
 import 'package:ionicons/ionicons.dart';

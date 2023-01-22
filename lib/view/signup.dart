@@ -1,5 +1,6 @@
 import 'package:egypt_eye/viewModels/signupViewModel.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:get/get.dart';
 
 class SignupPage extends StatefulWidget {
@@ -13,7 +14,7 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     final controller =Get.put(SignUpController());
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
     
     return Scaffold(
         backgroundColor: Colors.grey[300],
@@ -142,7 +143,7 @@ class _SignupPageState extends State<SignupPage> {
                 child: Center(
                     child: ElevatedButton(
                       onPressed: (){
-                        if(_formKey.currentState!.validate()){
+                        if(formKey.currentState!.validate()){
                           SignUpController.instance.registerUser(controller.email.text.trim(), controller.password.text.trim());
                         }
                       },
