@@ -1,6 +1,9 @@
 import 'package:egypt_eye/view/HomeScreen.dart';
 import 'package:egypt_eye/view/editprofile.dart';
+import 'package:egypt_eye/view/forgetpasswordMail.dart';
+import 'package:egypt_eye/view/forgetpasswordPhon.dart';
 import 'package:egypt_eye/view/map.dart';
+import 'package:egypt_eye/view/otp_screen.dart';
 import 'package:egypt_eye/view/profile.dart';
 import 'package:egypt_eye/view/settings.dart';
 import 'package:egypt_eye/view/welcome_page_dart.dart';
@@ -43,7 +46,7 @@ class MyApp extends StatelessWidget {
         GoRoute(
           path: 'path2',
           builder: (BuildContext context, GoRouterState state) =>
-              const HomeScreen(),
+               Signin(),
         ),
         GoRoute(
           path: 'path3',
@@ -64,7 +67,25 @@ class MyApp extends StatelessWidget {
           path: 'path5',
           builder: (BuildContext context, GoRouterState state) =>
               const ProfilePage(),
-        )
+        ),
+        GoRoute(
+          path: 'path6',
+          builder: (BuildContext context, GoRouterState state) =>
+               ForgetPasswordMailScreen(),
+        ),
+        GoRoute(
+          path: 'path7',
+          builder: (BuildContext context, GoRouterState state) =>
+            const OTPScreen(),
+        ),
+        GoRoute(
+          path: 'path8',
+          builder: (BuildContext context, GoRouterState state) =>
+             ForgetPasswordPhoneScreen(),
+        ),
+        
+
+        
       ],
       path: '/',
       builder: (BuildContext context, GoRouterState state) => WelcomePage(),

@@ -1,6 +1,9 @@
+import 'package:egypt_eye/main.dart';
+import 'package:egypt_eye/models/forgetpassbutton.dart';
 import 'package:egypt_eye/models/my_button.dart';
 import 'package:egypt_eye/models/my_textfield.dart';
 import 'package:egypt_eye/models/square_title.dart';
+import 'package:egypt_eye/viewModels/fbbottomsheet.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -37,20 +40,22 @@ class Signin extends StatelessWidget {
               // username textfield
               MyTextField(
                 controller: usernameController,
-                hintText: 'Username',
+                hintText: 'E-mail',
                 obscureText: false,
+                prefixIcon: const Icon(Icons.person_outline_outlined),
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
 
               // password textfield
               MyTextField(
                 controller: passwordController,
                 hintText: 'Password',
                 obscureText: true,
+                prefixIcon: const Icon(Icons.fingerprint),
+
               ),
 
-              const SizedBox(height: 20),
 
               // forgot password?
               Padding(
@@ -58,18 +63,19 @@ class Signin extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(
-                      'Forgot Password?',
-                      style: TextStyle(color: Colors.grey[600]),
+                    TextButton(
+                      onPressed: () {
+                        FPbottomsheet(context);
+                      },
+                      child: Text('Forgot Password?'),
                     ),
                   ],
                 ),
               ),
 
-              const SizedBox(height: 20),
 
               // sign in button
-              MyButton(onTap: () => context.go('/path2')
+              MyButton(onTap: () => context.go('/path3'), title: 'SignIn',
 
                   //signinViewModel.signUserIn(),
                   ),
@@ -90,7 +96,7 @@ class Signin extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Text(
-                        'Or continue with',
+                        'Or',
                         style: TextStyle(color: Colors.grey[700]),
                       ),
                     ),
@@ -106,21 +112,20 @@ class Signin extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // google + apple sign in buttons
+              // google login
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children:  [
                   // google button
-                  SquareTile(
-                    imagePath: 'assets/google.png',
-                  ),
-
-                  SizedBox(width: 25),
-
-                  // apple button
-                  SquareTile(
-                    imagePath: 'assets/facebook.png',
+                  OutlinedButton.icon(
+                    icon: const Image(image: AssetImage('assets/google.png'),width: 30.0,),
+                    onPressed: () {},
+                  label:Text('Sign-In with Google')
+                  
                   )
+
+
+
                 ],
               ),
 
@@ -146,4 +151,5 @@ class Signin extends StatelessWidget {
       ),
     );
   }
+
 }
