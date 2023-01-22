@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -12,38 +14,38 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Settings'),
+        title: const Text('Settings'),
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 1,
         leading: IconButton(
           onPressed: () {
             context.go('/path2');
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: Colors.green,
           ),
         ),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 16, top: 25, right: 16),
+        padding: const EdgeInsets.only(left: 16, top: 25, right: 16),
         child: ListView(children: [
-          Text(
+          const Text(
             "Settings",
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          Row(children: [
-            const Icon(
+          Row(children: const [
+            Icon(
               Icons.settings,
               color: Colors.green,
             ),
-            const SizedBox(
+            SizedBox(
               width: 8,
             ),
-            const Text("General Settings",
+            Text("General Settings",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold))
           ]),
           const Divider(
@@ -62,7 +64,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         title: const Text('Change password'),
                         content: Column(
                           mainAxisSize: MainAxisSize.min,
-                          children: [
+                          children: const [
                             Text("option 1"),
                           ],
                         ),
@@ -71,7 +73,7 @@ class _SettingsPageState extends State<SettingsPage> {
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
-                            child: Text("Close"),
+                            child: const Text("Close"),
                           )
                         ]);
                   });
@@ -85,7 +87,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         fontWeight: FontWeight.w500,
                         color: Colors.grey[700],
                       )),
-                  Icon(
+                  const Icon(
                     Icons.arrow_forward_ios,
                     color: Colors.grey,
                   )
@@ -103,7 +105,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         title: const Text('Privacy & Policy'),
                         content: Column(
                           mainAxisSize: MainAxisSize.min,
-                          children: [
+                          children: const [
                             Text("privacy and policy data text"),
                           ],
                         ),
@@ -112,7 +114,7 @@ class _SettingsPageState extends State<SettingsPage> {
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
-                            child: Text("Close"),
+                            child: const Text("Close"),
                           )
                         ]);
                   });
@@ -126,7 +128,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         fontWeight: FontWeight.w500,
                         color: Colors.grey[700],
                       )),
-                  Icon(
+                  const Icon(
                     Icons.arrow_forward_ios,
                     color: Colors.grey,
                   )
@@ -144,7 +146,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         title: const Text('privacy and policy'),
                         content: Column(
                           mainAxisSize: MainAxisSize.min,
-                          children: [
+                          children: const [
                             Text("privacy and policy here"),
                           ],
                         ),
@@ -153,7 +155,7 @@ class _SettingsPageState extends State<SettingsPage> {
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
-                            child: Text("Close"),
+                            child: const Text("Close"),
                           )
                         ]);
                   });
@@ -167,7 +169,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         fontWeight: FontWeight.w500,
                         color: Colors.grey[700],
                       )),
-                  Icon(
+                  const Icon(
                     Icons.arrow_forward_ios,
                     color: Colors.grey,
                   )

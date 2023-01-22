@@ -1,9 +1,4 @@
-import 'package:egypt_eye/widgets/custom_icon_button.dart';
-import 'package:egypt_eye/widgets/nearby_places.dart';
-import 'package:egypt_eye/widgets/recommended_places.dart';
 import 'package:flutter/material.dart';
-import 'package:egypt_eye/widgets/location_card.dart';
-import 'package:egypt_eye/widgets/tourist_places.dart';
 import 'package:ionicons/ionicons.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,15 +22,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
         actions: const [
-          CustomIconButton(
-            icon: Icon(Ionicons.search_outline),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 8, right: 12),
-            child: CustomIconButton(
-              icon: Icon(Ionicons.notifications_outline),
-            ),
-          ),
+          
         ],
       ),
       body: ListView(
@@ -43,11 +30,9 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(14),
         children: [
           // LOCATION CARD
-          const LocationCard(),
           const SizedBox(
             height: 15,
           ),
-          const TouristPlaces(),
           // CATEGORIES
           const SizedBox(height: 10),
           Row(
@@ -61,7 +46,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          const RecommendedPlaces(),
           const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -74,7 +58,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          const NearbyPlaces(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

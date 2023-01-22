@@ -1,4 +1,6 @@
 
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:egypt_eye/models/forgetpassbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -8,7 +10,7 @@ import 'package:go_router/go_router.dart';
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                         context: context,
                        builder: (context)=> Container(
-                        padding: EdgeInsets.all(30),
+                        padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [

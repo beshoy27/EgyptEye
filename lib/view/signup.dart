@@ -14,12 +14,13 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     final controller =Get.put(SignUpController());
-    final formKey = GlobalKey<FormState>();
+    final _formKey = GlobalKey<FormState>();
     
     return Scaffold(
         backgroundColor: Colors.grey[300],
         body: SafeArea(
             child: Form(
+              key: _formKey,
               child: Column(children: [
                       //logo edit//
                       Expanded(child: Image.asset('assets/eye.png')),
@@ -143,9 +144,10 @@ class _SignupPageState extends State<SignupPage> {
                 child: Center(
                     child: ElevatedButton(
                       onPressed: (){
-                        if(formKey.currentState!.validate()){
+                        if(_formKey.currentState!.validate()){
                           SignUpController.instance.registerUser(controller.email.text.trim(), controller.password.text.trim());
                         }
+                        
                       },
                       child: const Text('REGISTER'),
                 )

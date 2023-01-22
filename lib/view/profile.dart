@@ -70,7 +70,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: const [
                         Text(
                           'Ahmed Bakr',
                           style: TextStyle(
