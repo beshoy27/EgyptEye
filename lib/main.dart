@@ -45,13 +45,11 @@ class MyApp extends StatelessWidget {
         ),
         GoRoute(
           path: 'path2',
-          builder: (BuildContext context, GoRouterState state) =>
-               Signin(),
+          builder: (BuildContext context, GoRouterState state) => Signin(),
         ),
         GoRoute(
           path: 'path3',
-          builder: (BuildContext context, GoRouterState state) =>
-              const HomePage(),
+          builder: (BuildContext context, GoRouterState state) => HomePage(),
         ),
         GoRoute(
           path: 'path33',
@@ -71,21 +69,18 @@ class MyApp extends StatelessWidget {
         GoRoute(
           path: 'path6',
           builder: (BuildContext context, GoRouterState state) =>
-               ForgetPasswordMailScreen(),
+              ForgetPasswordMailScreen(),
         ),
         GoRoute(
           path: 'path7',
           builder: (BuildContext context, GoRouterState state) =>
-            const OTPScreen(),
+              const OTPScreen(),
         ),
         GoRoute(
           path: 'path8',
           builder: (BuildContext context, GoRouterState state) =>
-             ForgetPasswordPhoneScreen(),
+              ForgetPasswordPhoneScreen(),
         ),
-        
-
-        
       ],
       path: '/',
       builder: (BuildContext context, GoRouterState state) => WelcomePage(),

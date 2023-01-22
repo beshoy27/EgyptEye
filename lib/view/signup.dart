@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({Key? key}) : super(key: key);
@@ -9,6 +10,7 @@ class SignupPage extends StatefulWidget {
 
 class _SignupPageState extends State<SignupPage> {
   @override
+  bool showPassword = true;
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[300],
@@ -134,19 +136,41 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
-          const SizedBox(height: 10),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(color: Colors.blue[300]),
-              child: const Center(
-                  child: Text(
-                'Sign Up',
-                style: TextStyle(color: Colors.white),
-              )),
+          ElevatedButton(
+            onPressed: () {
+              context.go('/path3');
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Color.fromARGB(255, 27, 174, 243),
+              foregroundColor: Colors.white,
+              shadowColor: Colors.grey,
+              elevation: 10,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              padding: const EdgeInsets.symmetric(horizontal: 50),
+              textStyle: const TextStyle(
+                  fontSize: 14, letterSpacing: 2.2, color: Colors.white),
             ),
-          )
+            child: const Text("Sign up"),
+          ),
+          const SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {
+              context.go('/path3');
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Color.fromARGB(255, 27, 174, 243),
+              foregroundColor: Colors.white,
+              shadowColor: Colors.grey,
+              elevation: 10,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              padding: const EdgeInsets.symmetric(horizontal: 50),
+              textStyle: const TextStyle(
+                  fontSize: 14, letterSpacing: 2.2, color: Colors.white),
+            ),
+            child: const Text("Continue as a guest"),
+          ),
         ])));
   }
 }
