@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:egypt_eye/models/my_button.dart';
 import 'package:egypt_eye/models/my_textfield.dart';
 import 'package:flutter/material.dart';

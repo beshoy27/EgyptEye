@@ -3,12 +3,15 @@ import 'package:egypt_eye/models/my_textfield.dart';
 import 'package:egypt_eye/viewModels/fbbottomsheet.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
 
 class Signin extends StatelessWidget {
   Signin({super.key});
 
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
 
   @override
   Widget build(BuildContext context) {
@@ -116,7 +119,14 @@ class Signin extends StatelessWidget {
                   // google button
                   OutlinedButton.icon(
                     icon: const Image(image: AssetImage('assets/google.png'),width: 30.0,),
-                    onPressed: () {},
+                    onPressed: () {
+                      _googleSignIn.signIn().then((value){
+                        String userName=value!.displayName!;
+                        String profilePicture=value.photoUrl!;
+                      }
+                      );
+                      ()=> context.go('/path2');
+                    },
                   label:const Text('Sign-In with Google')
                   
                   )

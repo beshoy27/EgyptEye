@@ -23,6 +23,7 @@ void main() {
   Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform)
   .then((value) => Get.put(AuthenticationRepository()));
   runApp(MyApp());
+  Get.testMode=true;
 }
 
 class MyApp extends StatelessWidget {

@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:egypt_eye/models/my_button.dart';
 import 'package:egypt_eye/models/my_textfield.dart';
 import 'package:egypt_eye/viewModels/fbbottomsheet.dart';
@@ -56,7 +58,7 @@ class ForgetPasswordMailScreen extends StatelessWidget{
                       onPressed: () {
                         FPbottomsheet(context);
                       },
-                      child: Text('Forgot Password?'),
+                      child: const Text('Forgot Password?'),
                     ),
                   ],
                 ),

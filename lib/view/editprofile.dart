@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -62,7 +64,7 @@ class _EditProfilePageState extends State<EditProfile> {
                               spreadRadius: 2,
                               blurRadius: 10,
                               color: Colors.black.withOpacity(0.1),
-                              offset: Offset(0, 10),
+                              offset: const Offset(0, 10),
                             ),
                           ],
                           image: const DecorationImage(
@@ -133,7 +135,7 @@ class _EditProfilePageState extends State<EditProfile> {
                           },
                           icon: const Icon(Icons.remove_red_eye,
                               color: Colors.black)),
-                      contentPadding: EdgeInsets.only(bottom: 3),
+                      contentPadding: const EdgeInsets.only(bottom: 3),
                       labelText: 'Password',
                       border: InputBorder.none,
                       floatingLabelBehavior: FloatingLabelBehavior.always,

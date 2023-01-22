@@ -1,10 +1,10 @@
-import 'dart:ffi';
+
+// ignore_for_file: file_names, unnecessary_null_comparison, avoid_print, unused_catch_clause, empty_catches
 
 import 'package:egypt_eye/view/home_page.dart';
 import 'package:egypt_eye/view/welcome_page_dart.dart';
 import 'package:egypt_eye/viewModels/errorHandeling.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AuthenticationRepository extends GetxController{
@@ -30,7 +30,7 @@ class AuthenticationRepository extends GetxController{
   Future<void> createUserWithEmailAndPassword(String email,String password)async{
     try{
       await _auth.createUserWithEmailAndPassword(email: email,password: password);
-      firebaseUser.value !=null ? Get.offAll(()=> const HomePage()) : Get.to(()=>WelcomePage());
+      firebaseUser.value !=null ? Get.offAll(()=> const HomePage()) : Get.to(()=>const WelcomePage());
     } on FirebaseAuthException catch(e){
       final ex =SignUpWithEmailAndPasswordFailure.code(e.code);
       print('FIREBASE AUTH EXCEPTION - ${ex.message}');

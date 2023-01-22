@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -112,7 +114,7 @@ class _SettingsPageState extends State<SettingsPage> {
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
-                            child: Text("Close"),
+                            child: const Text("Close"),
                           )
                         ]);
                   });

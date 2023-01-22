@@ -31,7 +31,7 @@ class WelcomePage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               const Text(
-                "All your exciting destinations are here, \n Explore The Hidden Gems of Egypt",
+                "All your exciting destinations are here, \n Explore the HiddenGems of Egypt",
                 textAlign: TextAlign.center,
                 style: TextStyle(),
               ),
@@ -40,7 +40,8 @@ class WelcomePage extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 30),
                 child: SizedBox(
                   width: double.maxFinite,
-                  child: GetStartedButton(onTap: () => context.go('/path3')),
+                  child: GetStartedButton(onTap: () => context.go('/path2')
+                      ),
                 ),
               )
             ],

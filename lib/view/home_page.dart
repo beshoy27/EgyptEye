@@ -63,15 +63,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         actions: const [
-          CustomIconButton(
-            icon: Icon(Ionicons.search_outline),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 8, right: 12),
-            child: CustomIconButton(
-              icon: Icon(Ionicons.notifications_outline),
-            ),
-          ),
+          
         ],
       ),
       body: SingleChildScrollView(
