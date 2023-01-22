@@ -40,8 +40,7 @@ class WelcomePage extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 30),
                 child: SizedBox(
                   width: double.maxFinite,
-                  child: GetStartedButton(onTap: () => context.go('/path1')
-                      ),
+                  child: GetStartedButton(onTap: () => context.go('/path3')),
                 ),
               )
             ],
